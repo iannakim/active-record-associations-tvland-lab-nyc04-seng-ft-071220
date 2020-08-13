@@ -13,8 +13,6 @@ class Actor < ActiveRecord::Base
 
 
     def list_roles
-    #    character = self.characters.select {|character| character.actor == self}
-        # character.collect {|c| "#{c.actor} - #{c.show}"}
         self.characters.map {|character| "#{character.name} - #{character.show.name}"}.join
 
     end

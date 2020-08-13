@@ -70,7 +70,7 @@ or a model configured.
 
 
 
-- Write a method in the `Actor` class, `#list_roles`, that lists all of the
+-[x] Write a method in the `Actor` class, `#list_roles`, that lists all of the
   characters that actor has alongside the show that the character is in. So, for
   instance, if we had an actor, Peter Dinklage, a character, Tyrion Lannister,
   and a show, Game of Thrones, we with

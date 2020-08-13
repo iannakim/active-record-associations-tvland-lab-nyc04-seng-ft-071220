@@ -1,0 +1,7 @@
+Actor.destroy_all
+Character.destroy_all
+Show.destroy_all
+Actor.reset_pk_sequence
+Character.reset_pk_sequence
+Show.reset_pk_sequence
+

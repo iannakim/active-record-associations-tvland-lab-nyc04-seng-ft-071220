@@ -14,6 +14,12 @@ network, and character model. They will be associated in the following way:
 - A character belongs to an actor and belongs to a show.
 - A show has many characters and has many actors through characters.
 
+
+actor -< character >- show
+
+
+
+
 We've given you a few migrations in the `db/migrate` directory to create the
 networks and shows table, but you'll have to add additional tables and modify
 these existing tables as per the guidelines below.
@@ -25,7 +31,9 @@ these existing tables as per the guidelines below.
 The tests in this lab are run for each model/migration - actor, character,
 network (solution already provided), and show. Because of this, when run, you
 will see _all the tests_ for the Actor model first, then _all the tests for
-Character, etc... the tricky thing here is that **you will not be able to pass
+Character, etc... the tricky thing here is that 
+
+**you will not be able to pass
 all the tests for Actor until the migrations for other models are working**.
 
 This makes sense, and mirrors normal development of associations - you can't ask
@@ -34,18 +42,28 @@ or a model configured.
 
 ### Migrations
 
-- Write a migration for the actors table. An actor should have a `first_name`
-  and a `last_name`.
-- Write a migration for the characters table. A character should have a `name`,
+<!-- - Write a migration for the actors table. An actor should have a `first_name`
+  and a `last_name`. -->
+
+
+<!-- - Write a migration for the characters table. A character should have a `name`,
   `actor_id`, and a `show_id`––a character will belong to a show (the show
   migration is already provided) and an actor, and we'll keep track of this
-  relationship with these database table columns.
-- Write a migration that adds the column `catchphrase` to your character model.
+  relationship with these database table columns. -->
+
+
+<!-- - Write a migration that adds the column `catchphrase` to your character model. -->
+
+
 
 ### Associations
 
 - Associate the `Actor` model with the `Character` and `Show` model. An actor
   should have many characters and many shows through characters.
+
+
+
+
 - Write a method in the `Actor` class, `#full_name`, that returns the first and
   last name of an actor.
 - Write a method in the `Actor` class, `#list_roles`, that lists all of the
